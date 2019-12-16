@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  lampp:
+    image: mattrayner/lamp 
+    container_name: lampp-container
+    ports:
+      - "9000:80"
+      - "3086:3086"
+    volumes: 
+      - ./app/:/app
+      - ./mysql/:/var/lib/mysql
